@@ -40,6 +40,9 @@ app.use("/api", daysheetRoute);
 app.use("/api/dayusers", dayuserRoute);
 app.use("/api/wala", inventorywalaRoute);
 app.use("/api/cake", inventorycakeRoute);
+app.get('/', (req,res)=>{
+  res.json({message:'Hi from server'});
+})
 
 
 app.use((err, req, res, next) => {
